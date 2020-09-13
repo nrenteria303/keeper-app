@@ -40,7 +40,7 @@ function CreateArea(props) {
 
     return (
         <div>
-        <form  onFocus={handleFocus} className="create-note">
+        <form onSubmit={submitNote}  onFocus={handleFocus} className="create-note">
             {inputIsFocused && <input aria-label="Title of the new note" onChange={handleChange} name="title" placeholder="Title" value={newNote.title} />}
             <textarea aria-label="Content of the new note" onChange={handleChange} name="content" placeholder="Take a note..." rows={inputIsFocused ? "3" : "1"} value={newNote.content} />
             <Zoom in={inputIsFocused}>
